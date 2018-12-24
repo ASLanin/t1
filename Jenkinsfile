@@ -5,6 +5,7 @@ pipeline {
                 steps {
                    script {
                    sh 'date'
+                   
                    sh 'if [ -f master.txt ] ; then cat fake.txt ;fi'
                 }
             }
