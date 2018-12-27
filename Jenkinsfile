@@ -8,7 +8,7 @@
                     stage('test') {
                             steps {
                                     sh 'echo hello'
-                                    sh 'ping 8.8.8.8 -c 5'
+                                    sh 'ping 8.8.8.8 -c 100'
                             }
                     }
                     stage('test1') {
