@@ -5,7 +5,8 @@ pipeline {
                 steps {
                    script {
                    sh 'date'
-                   sh 'if [ -f master.txt ] ; then cat fake.txt ;fi'
+                   sh 'ping 8.8.8.8 -c 10'
+                   //sh 'if [ -f master.txt ] ; then cat fake.txt ;fi'
                 }
             }
         }
