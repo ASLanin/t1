@@ -1,10 +1,14 @@
     pipeline {
             agent any
+                options {
+                    disableConcurrentBuilds()
+                }
 
             stages {
                     stage('test') {
                             steps {
                                     sh 'echo hello'
+                                    sh 'ping 8.8.8.8 -c 5'
                             }
                     }
                     stage('test1') {
