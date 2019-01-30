@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  test001:
+    macos:
+      xcode: "9.0"
+
+    steps:
+      - checkout
+      - run:
+          name: Just test
+          command: |
+            xcode-select --install
+
+workflows:
+  version: 2
+  build-test-lint:
+    jobs:
+      - test001
